@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CoinDribble Privacy Policy — TechAdhoc" />
+  <title>Privacy Policy · CoinDribble</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary:   #376464;
+      --primary-lt:#507D7D;
+      --accent:    #CAA800;
+      --bg:        #F8F9FA;
+      --surface:   #FFFFFF;
+      --text:      #191C1D;
+      --muted:     #404848;
+      --border:    #C0C8C7;
+      --error:     #BA1A1A;
+      --radius-card: 16px;
+      --radius-pill: 50px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-lt) 100%);
+      color: #fff;
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 80px;
+      height: 80px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.12);
+      margin-bottom: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    }
+    header h1 {
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+    }
+    header p {
+      font-size: 0.95rem;
+      opacity: 0.8;
+    }
+    .pill {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 4px 16px;
+      border-radius: var(--radius-pill);
+      background: rgba(255,255,255,0.15);
+      font-size: 0.8rem;
+      letter-spacing: 0.3px;
+    }
+
+    /* ── Main layout ── */
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 32px 16px 64px;
+    }
+
+    /* ── Summary strip ── */
+    .summary {
+      background: var(--surface);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 20px 24px;
+      margin-bottom: 32px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+    }
+    .summary-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .badge {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+    .badge-green  { background: #e8f5e9; }
+    .badge-teal   { background: #e0f2f1; }
+    .badge-gold   { background: #fff8e1; }
+    .badge-purple { background: #f3e5f5; }
+    .summary-item p { font-size: 0.8rem; color: var(--muted); margin-top: 2px; }
+    .summary-item strong { font-size: 0.88rem; color: var(--text); }
+
+    /* ── Sections ── */
+    section {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 24px 28px;
+      margin-bottom: 16px;
+      border: 1px solid var(--border);
+    }
+    section:hover { border-color: var(--primary-lt); transition: border-color 0.2s; }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .section-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: rgba(55,100,100,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    p { color: var(--muted); font-size: 0.93rem; margin-bottom: 10px; }
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    ul li::before {
+      content: "✓";
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: rgba(55,100,100,0.12);
+      color: var(--primary);
+      font-size: 11px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+
+    /* ── Highlight box ── */
+    .highlight {
+      background: rgba(55,100,100,0.07);
+      border-left: 3px solid var(--primary);
+      border-radius: 0 8px 8px 0;
+      padding: 12px 16px;
+      margin: 12px 0;
+      font-size: 0.88rem;
+      color: var(--primary);
+      font-weight: 500;
+    }
+
+    /* ── External link ── */
+    a { color: var(--primary); text-decoration: none; font-weight: 500; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Contact card ── */
+    .contact-card {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-lt) 100%);
+      border-radius: var(--radius-card);
+      padding: 28px;
+      text-align: center;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    .contact-card h2 { color: #fff; font-size: 1.1rem; margin-bottom: 8px; }
+    .contact-card p  { color: rgba(255,255,255,0.8); margin-bottom: 16px; font-size: 0.9rem; }
+    .email-btn {
+      display: inline-block;
+      padding: 10px 28px;
+      border-radius: var(--radius-pill);
+      background: rgba(255,255,255,0.2);
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border: 1.5px solid rgba(255,255,255,0.4);
+      transition: background 0.2s;
+    }
+    .email-btn:hover { background: rgba(255,255,255,0.3); text-decoration: none; }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 24px 16px;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    footer strong { color: var(--primary); }
+
+    /* ── Responsive ── */
+    @media (max-width: 520px) {
+      header { padding: 36px 20px 32px; }
+      section { padding: 20px 18px; }
+      .summary { padding: 16px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Hero Header ── -->
+<header>
+  <div class="logo">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" width="80" height="80">
+      <!-- Teal background -->
+      <rect width="108" height="108" fill="#376464"/>
+      <!-- Subtle radial highlight -->
+      <circle cx="54" cy="54" r="50" fill="#427070"/>
+      <!-- Coin shadow ring -->
+      <circle cx="54" cy="54" r="30" fill="#5A3D00"/>
+      <!-- Gold coin face -->
+      <circle cx="54" cy="54" r="28" fill="#FFD95A"/>
+      <!-- Inner groove ring -->
+      <circle cx="54" cy="54" r="23" fill="none" stroke="#C9A000" stroke-width="1.2"/>
+      <!-- Coin shine crescent -->
+      <path d="M38,34 C42,26 66,26 70,34 C64,31 44,31 38,34 Z" fill="rgba(255,255,255,0.33)"/>
+      <!-- Left eye sclera -->
+      <circle cx="43" cy="48" r="5.5" fill="#fff"/>
+      <!-- Right eye sclera -->
+      <circle cx="65" cy="48" r="5.5" fill="#fff"/>
+      <!-- Left pupil -->
+      <circle cx="44" cy="49" r="3" fill="#1A0D00"/>
+      <!-- Right pupil -->
+      <circle cx="66" cy="49" r="3" fill="#1A0D00"/>
+      <!-- Left eye shine -->
+      <circle cx="45.5" cy="47" r="1.3" fill="#fff"/>
+      <!-- Right eye shine -->
+      <circle cx="67.5" cy="47" r="1.3" fill="#fff"/>
+      <!-- Smile -->
+      <path d="M44,62 Q54,72 64,62" fill="none" stroke="#7A5200" stroke-width="2.2" stroke-linecap="round"/>
+      <!-- Left cheek -->
+      <circle cx="36" cy="56" r="5" fill="#FFAA44" fill-opacity="0.35"/>
+      <!-- Right cheek -->
+      <circle cx="72" cy="56" r="5" fill="#FFAA44" fill-opacity="0.35"/>
+    </svg>
+  </div>
+  <h1>Privacy Policy</h1>
+  <p>CoinDribble · by TechAdhoc</p>
+  <span class="pill">Last updated: April 2026</span>
+</header>
+
+<main>
+
+  <!-- ── At-a-glance summary ── -->
+  <div class="summary">
+    <div class="summary-item">
+      <div class="badge badge-green">🔒</div>
+      <div>
+        <strong>No Data Collected</strong>
+        <p>Zero personal or financial data leaves your device</p>
+      </div>
+    </div>
+    <div class="summary-item">
+      <div class="badge badge-teal">📱</div>
+      <div>
+        <strong>100% Offline</strong>
+        <p>No accounts, no cloud sync, no internet required</p>
+      </div>
+    </div>
+    <div class="summary-item">
+      <div class="badge badge-gold">🛡️</div>
+      <div>
+        <strong>Locked &amp; Safe</strong>
+        <p>Your data is locked on your phone, safe and private</p>
+      </div>
+    </div>
+    <div class="summary-item">
+      <div class="badge badge-purple">📢</div>
+      <div>
+        <strong>A Few Simple Ads</strong>
+        <p>Basic ads to keep the app free — your money info is never shared</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1. Introduction -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">👋</div>
+      <h2>About CoinDribble</h2>
+    </div>
+    <p>
+      CoinDribble is a personal finance app made by <strong>TechAdhoc</strong>. It reads your
+      bank SMS messages to automatically track your spending — all on your phone, with no
+      internet connection needed.
+    </p>
+    <p>
+      This page explains what information the app uses, why it needs it, and how your
+      privacy is protected. If you have any questions, feel free to reach out to us.
+    </p>
+    <div class="highlight">
+      CoinDribble works completely offline. Your financial information never leaves your phone.
+    </div>
+  </section>
+
+  <!-- 2. Information We Do Not Collect -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">🚫</div>
+      <h2>What We Do Not Collect</h2>
+    </div>
+    <p>CoinDribble <strong>never</strong> collects or sees any of the following:</p>
+    <ul>
+      <li>Your name, email address, phone number, or home address</li>
+      <li>Your bank account numbers, card numbers, or passwords</li>
+      <li>Your transaction history — it stays on your phone only</li>
+      <li>Your location</li>
+      <li>What you do inside the app or how you use it</li>
+      <li>Any information that could be used to identify or track you</li>
+    </ul>
+    <p style="margin-top:12px;">
+      You don't need to create an account or sign up. There is no cloud storage and no syncing.
+    </p>
+  </section>
+
+  <!-- 3. SMS Permission -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">💬</div>
+      <h2>Why We Need Access to Your SMS</h2>
+    </div>
+    <p>
+      CoinDribble asks for permission to <strong>read your SMS messages</strong> so it can
+      automatically detect bank payment alerts and add them to your spending history —
+      saving you from entering transactions manually.
+    </p>
+    <ul>
+      <li>Only bank payment messages are looked at — personal messages are ignored</li>
+      <li>Your messages are read on your phone and are never sent anywhere</li>
+      <li>Only the amount, transaction type, and merchant name are saved — the original SMS is not stored</li>
+      <li>You can turn off this permission anytime in your phone's Settings → Apps → CoinDribble → Permissions</li>
+    </ul>
+    <div class="highlight">
+      Your SMS messages stay on your phone at all times. CoinDribble has no internet access
+      and cannot send anything anywhere.
+    </div>
+  </section>
+
+  <!-- 4. Local Storage & Encryption -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">🔐</div>
+      <h2>How Your Data Is Stored &amp; Protected</h2>
+    </div>
+    <p>
+      All your transactions, budgets, and settings are saved <strong>only on your phone</strong>
+      in a secure, locked database.
+    </p>
+    <ul>
+      <li>Your data is locked with a strong security key that only your phone holds</li>
+      <li>Nobody — including TechAdhoc — can access your data</li>
+      <li>The app does not need the internet to work</li>
+      <li>If you uninstall the app, all your data is permanently deleted</li>
+    </ul>
+  </section>
+
+  <!-- 5. Backup Feature -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">💾</div>
+      <h2>Backing Up Your Data</h2>
+    </div>
+    <p>
+      CoinDribble lets you save a backup of your transaction history to a file whenever
+      you choose — for example, to your phone storage or Google Drive.
+    </p>
+    <ul>
+      <li>The backup file is locked with a password that you set</li>
+      <li>Nobody can open the backup without your password — we don't have it</li>
+      <li>You choose where to save the backup — it's entirely in your hands</li>
+      <li>The app never backs up or uploads your data automatically</li>
+    </ul>
+  </section>
+
+  <!-- 6. Advertisements -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">📢</div>
+      <h2>Ads in the App</h2>
+    </div>
+    <p>
+      CoinDribble shows a <strong>small number of simple ads</strong> through Google to help
+      keep the app free. These ads are not based on your spending or financial activity.
+    </p>
+    <ul>
+      <li>Your money information and transactions are never shared with advertisers</li>
+      <li>Ads are not chosen based on what you do in the app</li>
+      <li>Google shows ads based on general, non-personal information</li>
+    </ul>
+    <p>
+      Google has its own privacy rules for the ads it shows. You can read more at
+      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">
+        Google's Privacy Policy
+      </a>.
+    </p>
+  </section>
+
+  <!-- 7. Crash Analytics -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">🐛</div>
+      <h2>When the App Crashes</h2>
+    </div>
+    <p>
+      If CoinDribble ever crashes or stops working, we automatically receive a short
+      <strong>error report</strong> so we can find and fix the problem.
+    </p>
+    <ul>
+      <li>The report only tells us what went wrong technically — things like your phone model, Android version, and which part of the app crashed</li>
+      <li>Your financial data, transactions, SMS messages, and personal information are never included</li>
+      <li>These reports are used only to improve the app and fix bugs</li>
+      <li>The information is never used for ads and is never sold or shared</li>
+    </ul>
+    <div class="highlight">
+      Crash reports help us fix issues faster — your financial data is never part of any report.
+    </div>
+  </section>
+
+  <!-- 8. Third-Party Services -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">🔗</div>
+      <h2>Other Services We Use</h2>
+    </div>
+    <p>CoinDribble uses two outside services to help run the app:</p>
+    <ul>
+      <li><strong>Google Ads</strong> — to show simple ads that keep the app free;
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>
+      </li>
+      <li><strong>Crash reporting</strong> — to automatically alert us if something breaks, so we can fix it quickly; no financial or personal data is included</li>
+    </ul>
+    <p>
+      We don't use any other outside services. Nothing that tracks your habits, reads your
+      financial information, or requires you to log in.
+    </p>
+  </section>
+
+  <!-- 8. Children's Privacy -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">👶</div>
+      <h2>Children</h2>
+    </div>
+    <p>
+      CoinDribble is intended for adults and is not designed for children under 13. We do
+      not knowingly collect any information from children. If you think a child has used
+      this app and shared any information, please email us at
+      <a href="mailto:info@techadhoc.com">info@techadhoc.com</a>
+      and we'll take care of it right away.
+    </p>
+  </section>
+
+  <!-- 9. Changes to This Policy -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">📝</div>
+      <h2>Updates to This Policy</h2>
+    </div>
+    <p>
+      If we ever make changes to this Privacy Policy, we'll update the
+      <strong>"Last updated"</strong> date at the top of this page. For bigger changes,
+      we may also show a notice inside the app.
+    </p>
+    <p>
+      We recommend checking this page occasionally. Continuing to use CoinDribble after
+      a change means you're okay with the updated policy.
+    </p>
+  </section>
+
+  <!-- 10. Contact -->
+  <div class="contact-card">
+    <h2>Questions or Concerns?</h2>
+    <p>
+      If you have any questions about this Privacy Policy or how CoinDribble handles your
+      data, we're happy to help.
+    </p>
+    <a class="email-btn" href="mailto:info@techadhoc.com">info@techadhoc.com</a>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2026 <strong>TechAdhoc</strong> · CoinDribble · All rights reserved</p>
+  <p style="margin-top:4px;">This app is fully offline. Your financial data never leaves your device.</p>
+</footer>
+
+</body>
+</html>
